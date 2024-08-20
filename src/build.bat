@@ -75,7 +75,7 @@ goto build
 :build_win32
 
 rem test for 4dos - no 4dos == no smarts
-if NOT "%@LOWER[A]" == "a" goto build_msvc5
+if NOT "%@LOWER[A]" == "a" goto build_msvc22
 
 rem try to auto detect the build tools available
 set lpath=%@LOWER[%PATH%]
@@ -103,16 +103,11 @@ goto build
 :build_msvc
 
 set MAKE=nmake
-if %@INDEX[%lpath%,\vc98] == %msvc% goto build_msvc6
+if %@INDEX[%lpath%,\vc98] == %msvc% goto build_msvc22
 
-:build_msvc5
+:build_msvc22
 
-set MAKEFILE=win32v5.mak
-goto build
-
-:build_msvc6
-
-set MAKEFILE=win32v6.mak
+set MAKEFILE=win32v22.mak
 
 :build
 

@@ -28,7 +28,8 @@
 // Generated from the TEXTINCLUDE 2 resource.
 //
 #ifndef __BORLANDC__
-#include "afxres.h"
+#include <windows.h>
+#include <winres.h>
 #endif // ! __BORLANDC__
 
 /////////////////////////////////////////////////////////////////////////////
